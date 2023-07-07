@@ -2,6 +2,7 @@ import keyboard
 
 from classes.actionsManager import ActionsManager
 from .playSong import playSong
+from .chatTest import chatTest
 
 def printintingText():
   print("XXXXX")
@@ -20,5 +21,6 @@ def rust_actions():
   actions_manager.register_action("1-True", printintingText)
   actions_manager.register_action('2-True', printingNumbers)
   actions_manager.register_action('3-True', playSong)
+  actions_manager.register_action("4-True", chatTest)
 
   keyboard.on_press(actions_manager.perform_action)
